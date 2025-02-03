@@ -57,16 +57,12 @@ button:hover{
 }
 @media (max-width: 500px) {
     .con{
-        width: 70%;
-    }
-}
-@media (max-width: 350px) {
-    .con{
-        width: 90%;
-    }
-}
-@media (max-width: 250px) {
-    .con{
+        padding: 20px;
         width: 100%;
+        border-radius: 0;
+        height: 100vh;
+    }
+    button{
+        margin-top: auto;
     }
 }
