@@ -18,14 +18,19 @@ let myInput;
 let myNewInput = document.getElementById("conValid");
 let myInputBox = document.getElementById("email");
 let mysubmittion = document.getElementById("myform");
+let setmail = document.getElementById("setmail");
 
 function handleChange(event){
     console.log(event.target.value);
     myInput = event.target.value;
+
+    updateStorage();
+
     if(myInput.includes('@')){
         console.log("contains @");
         myNewInput.style.color = "green";
         mysubmittion.action = "success.html";
+        
     }else{
         console.log("doesn't contain @");
         mysubmittion.action = "  ";
@@ -44,3 +49,25 @@ function handleChange(event){
 function myClose(){
     window.location.href = "index.html"
 }
+
+
+function updateStorage() {
+    // Change something in localStorage
+    localStorage.setItem("newContent", myInput);
+  }
+
+  window.addEventListener('storage', function(event) {
+    if (event.key === 'newContent') {
+      // Get the updated content from localStorage
+      var newContent = localStorage.getItem('newContent');
+      setmail.innerHTML = newContent;
+    }
+  });
+  
+  // Initial check when the page loads
+  var newContent = localStorage.getItem('newContent');
+  if (newContent) {
+    setmail.innerHTML = newContent;
+  }else{
+    console.log("it's not available")
+  }
