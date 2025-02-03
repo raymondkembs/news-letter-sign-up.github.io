@@ -56,6 +56,9 @@ button:hover{
     background: linear-gradient(to right, var(--tomato), orange);
 }
 @media (max-width: 500px) {
+    body{
+        background: var(--white);
+    }
     .con{
         padding: 20px;
         width: 100%;
