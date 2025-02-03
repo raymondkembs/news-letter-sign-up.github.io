@@ -15,7 +15,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     height: 100vh;
     background: var(--darkSlateGrey)
 }
@@ -51,10 +50,15 @@ main > div{
     color: var(--darkSlateGrey);
     font-size: 3rem;
 }
+.objOne ul{
+    list-style-position: outside;
+}
 .objOne li{
     list-style-image: url('icon-list.svg');
     margin-left: 25px;
     margin-top: 10px;
+    font-size: 15px;
+    padding-left: 10px;
 }
 .objOne form > p, input, button{
     margin: 2px;
@@ -71,7 +75,7 @@ main > div{
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 2px solid var(--lightGrey);
+    border: 1.5px solid var(--lightGrey);
 }
 .objOne form input:hover{
     border-color: var(--grey);
@@ -87,7 +91,7 @@ main > div{
 }
 .objOne form button:hover{
     cursor: pointer;
-    box-shadow: 0 10px 10px rgba(255, 165, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(255, 165, 0, 0.3);
     background: linear-gradient(to right, var(--tomato), orange);
 }
 .objOne form .conValid{
